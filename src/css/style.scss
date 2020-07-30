@@ -1,0 +1,269 @@
+$warna-utama: #363732;
+$warna-kedua: #DCE1E9;
+$biru-kehitaman: #66C3FF;
+$biru-cerah: #53D8FB;
+$pink: #D4AFB9;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #DCE1E9;
+}
+
+.root{
+  font-family: 'Merriweather', serif;
+}
+
+.navbar{
+  width: 100%;
+  height: 3.5rem;
+  background: $biru-cerah;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1{
+    font-weight: bolder;
+    font-size: 2.5rem;
+  }
+
+  ul{
+    list-style: none;
+    display: flex;
+
+    li{
+      padding: 1rem;
+      margin: 0 1rem;
+
+      &:hover{
+        cursor: pointer;
+        background: $biru-kehitaman;
+      }
+    }
+  }
+}
+
+.aksi-navbar{
+    display: flex;
+    align-items: center;
+
+    input{
+      border: none;
+      outline: none;
+      background-color: $warna-utama;
+      color: $warna-kedua;
+      padding: .5rem 1rem .5rem .5rem;
+      margin: 0 -.7rem 0 20px;
+      border: 2px solid $pink;
+      transition: all .5s ease-in-out;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    button{
+      border: none;
+      outline: none;
+      background-color: $pink;
+      border: 2px solid $pink;
+      padding: .5rem;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      transition: .3s;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:active{
+        transform: scale(.9);
+      }
+    }
+}
+
+img{
+  width: 100%;
+}
+
+.badan-konten{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.judul{
+  grid-column: 1/3;
+  padding: 1rem;
+  font-size: 2.3rem;
+}
+
+.konten{
+  padding: 0 1rem;
+}
+
+.post{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  margin-bottom: 1rem;
+  grid-column-gap: 10px;
+
+  &:last-child{
+    margin-bottom: 3rem;
+  }
+
+  img{
+    grid-row: 1/4;
+    width: 100%;
+  }
+
+  h3{
+    justify-self: start;
+    align-self: start;
+    font-size: 1.9rem;
+
+    &:hover{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  p{
+    line-height: 1.5rem;
+    font-size: 1rem;
+    opacity: .7;
+  }
+
+  a{
+    justify-self: start;
+    align-self: end;
+    color: $biru-kehitaman;
+  }
+}
+
+.konten-kanan{
+  padding-right: 1rem;
+}
+
+.post-kecil{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 10px;
+  margin: 1rem 0;
+
+  img{
+    grid-row: 1/3;
+  }
+
+  h5{
+    justify-self: start;
+    align-self: start;
+    font-size: 1.3rem;
+
+    &:hover{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  a{
+    color: $biru-kehitaman;
+    justify-self: start;
+    align-self: end;
+  }
+}
+
+.isi-tag{
+  display: flex;
+  flex-wrap: wrap;
+
+  .tag{
+    background-color: $warna-utama;
+    color: $warna-kedua;
+    padding: .2rem;
+    font-size: .8rem;
+    margin: 3px;
+    letter-spacing: .1rem;
+    cursor: pointer;
+  }
+}
+
+.badan-footer{
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 3rem;
+}
+
+.kartu{
+  justify-self: center;
+  align-self: center;
+  background-color: $warna-utama;
+  max-width: 70%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 5rem 1rem;
+  border-radius: 10px;
+  position: relative;
+
+  &::before{
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 200px;
+    bottom: calc(265px - 95%);
+    background-color: $warna-utama;
+    justify-self: center;
+    z-index: -1;
+    filter: blur(10px);
+  }
+
+  h1{
+    color: $biru-cerah;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  div{
+    align-self: center;
+    justify-self: center;
+    position: relative;
+
+    input{
+      outline: none;
+      border: 2px solid $pink;
+      background-color: $warna-kedua;
+      padding: .5rem;
+      padding-right: 1rem;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      margin-right: -10px;
+    }
+
+    span{
+      position: absolute;
+      color: $warna-kedua;
+      left: .5rem;
+      top: -1.2rem;
+      letter-spacing: .1rem;
+    }
+
+    button{
+      outline: none;
+      border: 2px solid $pink;
+      padding: .5rem;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: $pink;
+      color: $warna-utama;
+      font-weight: bold;
+      cursor: pointer;
+      transition: .3s;
+
+      &:active{
+        transform: scale(.9);
+      }
+    }
+  }
+}

@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import './css/style.css';
+import Home from './Components/home/';
+import CariBlog from './Components/Molecules/CariBlog';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Home />
+    {/* <CariBlog ada={['siapa', 'yang bisa']}>
+      <p>apa yang mu rasa?<i>asd</i></p>
+      <div>asdasdads</div>
+    </CariBlog> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
