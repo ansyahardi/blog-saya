@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {FacebookFilled, YoutubeFilled, LinkedinFilled, DribbbleSquareFilled} from '@ant-design/icons';
 
 export default class Footer extends Component {
   render() {
@@ -15,10 +16,10 @@ export default class Footer extends Component {
         <div className="footer">
           <div className="sosial-media">
             <p>yuk terus ikuti kami dengan mengikuti media sosial kami terus agar kami tidak ketinggalan info terbaru.</p>
-            <span>icon</span>
-            <span>icon</span>
-            <span>icon</span>
-            <span>icon</span>
+            <FacebookFilled />
+            <YoutubeFilled />
+            <LinkedinFilled />
+            <DribbbleSquareFilled />
           </div>
           <div className="kenapa-saya">
             <div className="bagian1">
