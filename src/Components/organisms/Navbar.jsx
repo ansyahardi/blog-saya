@@ -1,11 +1,12 @@
 import React from 'react';
 import {SearchOutlined} from '@ant-design/icons';
+import {Link} from "react-router-dom";
 
 export default function Navbar() {
 
   const isiMenu = ['Home', 'Populer', 'Kontak', 'Tentang'];
 
-  const menu = isiMenu.map(e => <li key={e}>{e}</li>)
+  const menu = isiMenu.map(e => <Link key={e} to={`/${e}`}>{e}</Link>)
 
   const hendleClick = e => {
     const humberger = e.target;

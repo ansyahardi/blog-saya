@@ -7,8 +7,7 @@ export default class Home extends Component {
   render() {
     return (
       <>
-        <Navbar />
-        <BadanKonten />
+        <BadanKonten judul="Home" />
       </>
     )
   }

@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
+import PropTypes from 'prop-types';
 import {Footer, KontenKanan} from '../organisms';
-import {Post, Kartu, KartuFooter} from '../molecules';
+import {Post, Kartu, KartuFooter, PostBesar} from '../molecules';
 import data from '../../data/dataDummy.json';
 
 export default class BadanKonten extends Component {
@@ -12,17 +13,24 @@ export default class BadanKonten extends Component {
     
 
     return (
-      <div className="badan-konten">
-        <h1 className="judul">Home</h1>
+      <>
+        <h1 className="judul">{this.props.judul}</h1>
+        {this.props.judul === "Populer"? <PostBesar src={isiData[0].foto} judul={isiData[0].judul} isi={isiData[0].isi} /> : ""}
         <div className="konten">
-          {post}
+          <div>
+            {post}
+          </div>
+          <KontenKanan/>
         </div>
-        <KontenKanan/>
         <Footer>
           <Kartu/>
           <KartuFooter/>
         </Footer>
-      </div>
+      </>
     )
   }
+}
+
+BadanKonten.propTypes = {
+  judul: PropTypes.string
 }

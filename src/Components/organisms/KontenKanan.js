@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {PostKecil} from '../molecules';
+import {Link} from 'react-router-dom';
 import data from '../../data/dataDummy.json';
 
 export default class KontenKanan extends Component {
@@ -8,7 +9,7 @@ export default class KontenKanan extends Component {
     const isiData = data.post;
     const tags = ['Teknologi', 'Seni', 'Alam', 'Persentasi', 'Bisnis', 'Penigkatan Diri'];
     const postKecil = isiData.map(e => <PostKecil key={e.id} src={e.foto} judul={e.judul} />);
-    const tag = tags.map(e => <p key={e} className="tag">{e}</p>);
+    const tag = tags.map(e => <Link to={`/PopulerDiTag/${e}`} key={e} className="tag">{e}</Link>);
 
     return (
       <div className="konten-kanan">
