@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import {Navbar} from '../Components/organisms';
+import React, { Component } from 'react';
 import {BadanKonten} from '../Components/templates';
 
 
