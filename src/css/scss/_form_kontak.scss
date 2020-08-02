@@ -1,0 +1,64 @@
+.form-kontak{
+  grid-column: 1/3;
+  align-self: center;
+  justify-self: center;
+  width: 30%;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,.4),
+              -4px -4px 3px #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 2rem;
+
+  .input-kontak{
+    display: flex;
+    flex-direction: column;
+    
+    input{
+      height: 30px;
+      outline: none;
+      border: none;
+      background: transparent;
+      border-bottom: 2px solid black;
+      transition: .2s ease-in;
+      
+      &:focus{
+        border-color: $pink;
+      }
+    }
+
+    textarea{
+      height: 120px;
+      outline: none;
+      border: none;
+      resize: none;
+      background: transparent;
+      border-bottom: 2px solid black;
+      transition: .2s ease-in;
+      
+      &:focus{
+        border-color: $pink;
+      }
+    }
+  }
+
+  .kirim{
+    justify-self: center;
+    align-self: center;
+    padding: .7rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background: $biru-cerah;
+    color: $warna-utama;
+    box-shadow: 3px 3px 10px rgba(0,0,0,.3);
+    transition: .2s ease-in;
+
+    &:active{
+      transform: scale(.9);
+    }
+  }
+}
