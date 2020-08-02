@@ -499,16 +499,19 @@ body {
   width: 100%;
 }
 
-.post h3 {
+.post .judul-post, .post h3 {
+  color: #363732;
+  text-decoration: none;
   -ms-grid-column-align: start;
       justify-self: start;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
   font-size: 1.9rem;
+  font-weight: bold;
 }
 
-.post h3:hover {
+.post .judul-post:hover, .post h3:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -559,16 +562,19 @@ body {
   width: 100%;
 }
 
-.post-kecil h5 {
+.post-kecil .judul-post, .post-kecil h5 {
   -ms-grid-column-align: start;
       justify-self: start;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
   font-size: 1.3rem;
+  color: #363732;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.post-kecil h5:hover {
+.post-kecil .judul-post:hover, .post-kecil h5:hover {
   text-decoration: underline;
   cursor: pointer;
 }

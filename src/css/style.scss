@@ -42,10 +42,13 @@
     width: 100%;
   }
 
-  h3{
+  .judul-post, h3{
+    color: $warna-utama;
+    text-decoration: none;
     justify-self: start;
     align-self: start;
     font-size: 1.9rem;
+    font-weight: bold;
 
     &:hover{
       text-decoration: underline;
@@ -91,10 +94,13 @@
     width: 100%;
   }
 
-  h5{
+  .judul-post, h5{
     justify-self: start;
     align-self: start;
     font-size: 1.3rem;
+    color: $warna-utama;
+    text-decoration: none;
+    font-weight: bold;
 
     &:hover{
       text-decoration: underline;

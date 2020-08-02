@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default function Post(props) {
   return (
     <div className="post">
       <img src={props.src} alt={props.judul} />
-      <h3>{props.judul}</h3>
+      <Link to="/post" className="judul-post">{props.judul}</Link>
       <p>{props.isi}</p>
-      <a href="#">Mulai Baca</a>
+      <Link to="/post">Mulai Baca</Link>
     </div>
   )
 }

@@ -32,10 +32,12 @@ export default class index extends Component {
           <Route path="/Tentang">
             <TentangSaya/>
           </Route>
+          <Route path="/post">
+            <Blog/>
+          </Route>
           <Route path="/PopulerDiTag/:ardi" component={PopulerDiTag} />
           <Route path="/">
-            {/* <Home/> */}
-            <Blog/>
+            <Home/>
           </Route>
         </Switch>
       </Router>
