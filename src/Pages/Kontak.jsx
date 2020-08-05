@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Footer} from '../Components/organisms';
-import {Kartu, KartuFooter} from '../Components/molecules';
+import {KartuFooter} from '../Components/molecules';
 
 export default class Kontak extends Component {
 

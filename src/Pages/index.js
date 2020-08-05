@@ -13,6 +13,11 @@ import TentangSaya from './TentangSaya';
 import Blog from './Blog';
 
 export default class index extends Component {
+
+  componentDidMount(){
+    console.log(this);
+  }
+
   render() {
 
     return (
@@ -20,23 +25,23 @@ export default class index extends Component {
         <Navbar/>
 
         <Switch>
-          <Route path="/Home">
+          <Route path={`/Home`}>
             <Home/>
           </Route>
-          <Route path="/Populer">
+          <Route path={`/Populer`}>
             <Populer/>
           </Route>
-          <Route path="/Kontak">
+          <Route path={`/Kontak`}>
             <Kontak/>
           </Route>
-          <Route path="/Tentang">
+          <Route path={`/Tentang`}>
             <TentangSaya/>
           </Route>
-          <Route path="/post">
+          <Route path={`/post`}>
             <Blog/>
           </Route>
-          <Route path="/PopulerDiTag/:ardi" component={PopulerDiTag} />
-          <Route path="/">
+          <Route path={`/PopulerDiTag/:ardi`} component={PopulerDiTag} />
+          <Route path={`/`}>
             <Home/>
           </Route>
         </Switch>
