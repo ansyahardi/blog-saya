@@ -138,6 +138,26 @@ body {
           transform: scale(0.9);
 }
 
+.aksi-navbar .pencarian {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.aksi-navbar .pencarian input {
+  border-radius: 10px;
+  width: 80%;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.aksi-navbar .pencarian span {
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
+
 .form-kontak {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -839,6 +859,9 @@ body {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-row-gap: 1rem;
+  }
+  .form-kontak {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=style.css.map */

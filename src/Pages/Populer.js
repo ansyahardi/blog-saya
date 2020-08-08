@@ -1,29 +1,37 @@
-import React, { Component } from 'react';
+/* eslint-disable array-callback-return */
+import React, { useContext } from 'react';
 import {Footer} from '../Components/organisms';
 import {KartuFooter, Kartu, PostBesar, Post} from '../Components/molecules';
-import data from '../data/dataDummy.json';
+// import data from '../data/dataDummy.json';
+import {MyContext} from '../Components/Provier';
 
-export default class Populer extends Component {
-  render() {
+export default function Populer(props) {
 
-    const isiData = data.post;
-    const post = isiData.map(e => <Post key={e.id} src={e.foto} judul={e.judul} isi={e.isi} />);
+  const [Consume] = useContext(MyContext);
+  const isiData = Consume.post;
+  const ketik = Consume.ketik.toLowerCase();
+  const post = isiData.map(e => {
+    const judul = e.judul.toLowerCase();
+    if(judul.indexOf(ketik) === -1){
+      return;
+    }
+    return <Post key={e.id} src={e.foto} judul={e.judul} isi={e.isi} />;
+  });
 
-    return (
-      <>
-        <h1 className="judul">Populer</h1>
-        <PostBesar src={isiData[0].foto} judul={isiData[0].judul} isi={isiData[0].isi} />
-        <div className="konten">
-          <div>
-            {post}
-          </div>
-          <p>Populer di BlogSaya</p>
+  return (
+    <>
+      <h1 className="judul">Populer</h1>
+      {ketik.length > 0  ? '' : <PostBesar src={isiData[0].foto} judul={isiData[0].judul} isi={isiData[0].isi} />}
+      <div className="konten">
+        <div>
+          {post}
         </div>
-        <Footer>
-          <Kartu/>
-          <KartuFooter/>
-        </Footer>
-      </>
-    )
-  }
+        <p>Populer di BlogSaya</p>
+      </div>
+      <Footer>
+        <Kartu/>
+        <KartuFooter/>
+      </Footer>
+    </>
+  )
 }

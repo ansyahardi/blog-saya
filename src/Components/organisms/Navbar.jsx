@@ -1,6 +1,6 @@
 import React from 'react';
-import {SearchOutlined} from '@ant-design/icons';
 import {Link} from "react-router-dom";
+import Pencarian from '../molecules/Pencarian';
 
 export default function Navbar() {
 
@@ -15,9 +15,8 @@ export default function Navbar() {
 
     ul.classList.toggle("simpan");
     navbarAksi.classList.toggle("simpan");
-
-    console.log(navbarAksi);
   }
+  
   const hendleClick2 = e => {
     e.stopPropagation();
     const humberger = e.target.parentNode;
@@ -26,8 +25,6 @@ export default function Navbar() {
 
     ul.classList.toggle("simpan");
     navbarAksi.classList.toggle("simpan");
-
-    console.log(navbarAksi);
   }
 
   return (
@@ -40,7 +37,7 @@ export default function Navbar() {
         {menu}
       </ul>
       <div className="aksi-navbar simpan">
-        <SearchOutlined style={{fontSize: "1.3rem", color:"#363732"}} />
+        <Pencarian/>
         <div className="input-berlangganan">
           <input type="email" placeholder="Email" />
           <button>Berlangganan</button>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Navbar} from '../Components/organisms';
 import {
   BrowserRouter as Router,
@@ -11,41 +11,37 @@ import PopulerDiTag from './PopulerDiTag';
 import Kontak from './Kontak';
 import TentangSaya from './TentangSaya';
 import Blog from './Blog';
+import Provider from '../Components/Provier';
 
-export default class index extends Component {
-
-  componentDidMount(){
-    console.log(this);
-  }
-
-  render() {
+export default function index() {
 
     return (
       <Router>
-        <Navbar/>
+        <Provider>
+          <Navbar/>
 
-        <Switch>
-          <Route path={`/Home`}>
-            <Home/>
-          </Route>
-          <Route path={`/Populer`}>
-            <Populer/>
-          </Route>
-          <Route path={`/Kontak`}>
-            <Kontak/>
-          </Route>
-          <Route path={`/Tentang`}>
-            <TentangSaya/>
-          </Route>
-          <Route path={`/post`}>
-            <Blog/>
-          </Route>
-          <Route path={`/PopulerDiTag/:ardi`} component={PopulerDiTag} />
-          <Route path={`/`}>
-            <Home/>
-          </Route>
-        </Switch>
+          <Switch>
+            <Route path={`/Home`}>
+              <Home/>
+            </Route>
+            <Route path={`/Populer`}>
+              <Populer/>
+            </Route>
+            <Route path={`/Kontak`}>
+              <Kontak/>
+            </Route>
+            <Route path={`/Tentang`}>
+              <TentangSaya/>
+            </Route>
+            <Route path={`/post`}>
+              <Blog/>
+            </Route>
+            <Route path={`/PopulerDiTag/:ardi`} component={PopulerDiTag} />
+            <Route path={`/`}>
+              <Home/>
+            </Route>
+          </Switch>
+        </Provider>
       </Router>
     )
-  }
 }
